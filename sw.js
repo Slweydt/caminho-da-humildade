@@ -1,5 +1,5 @@
 // Funcionamento offline: guarda os arquivos do app no aparelho depois da primeira visita.
-const CACHE = 'caminho-v4'
+const CACHE = 'caminho-v5'
 
 self.addEventListener('install', (ev) => {
   ev.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', './index.html', './manifest.webmanifest'])))
