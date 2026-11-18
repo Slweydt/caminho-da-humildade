@@ -201,3 +201,5 @@ p { margin: 0 0 1em; }
   .marca { font-size: 1.1rem; }
   .idioma summary span, .idioma summary .seta { display: none; }
 }
+
+.aviso { margin-top: 1.5rem; padding: 1rem 1.1rem; border-left: 3px solid var(--aurora); background: var(--papel); max-width: 38rem; }
