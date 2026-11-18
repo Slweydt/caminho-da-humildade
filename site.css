@@ -171,12 +171,18 @@ p { margin: 0 0 1em; }
   .livro p { font-size: 0.9rem; }
 }
 
-/* Compartilhar */
-.compartilhar { margin-top: 1rem; }
-.compartilhar .botao { display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; }
-.compartilhar .redes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
-.compartilhar .redes a, .compartilhar .redes button { font: 700 0.92rem/1.2 var(--sans); padding: 0.5rem 0.8rem; border-radius: 0.4rem; border: 1px solid var(--linha); background: var(--papel); color: var(--tinta); text-decoration: none; cursor: pointer; }
-.compartilhar .redes a:hover, .compartilhar .redes button:hover { border-color: var(--musgo); }
-.compartilhar.escuro .botao { border-color: #8f9a8f; color: #eef1ec; }
-.compartilhar.escuro .botao:hover { background: rgba(255,255,255,.08); }
-.compartilhar.escuro .redes a, .compartilhar.escuro .redes button { background: transparent; color: #eef1ec; border-color: #5a665e; }
+/* Compartilhar: botão no topo e janela */
+.botao.comp { display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; }
+#janela-comp { border: none; border-radius: 0.75rem; padding: 1.5rem; width: min(24rem, calc(100vw - 2rem)); background: var(--papel); color: var(--tinta); box-shadow: 0 24px 60px -20px rgba(0,0,0,.5); }
+#janela-comp::backdrop { background: rgba(22, 27, 25, 0.55); }
+#janela-comp h2 { font-size: 1.35rem; margin-bottom: 1rem; }
+#janela-comp .opcoes { display: grid; gap: 0.5rem; }
+#janela-comp .opcoes a, #janela-comp .opcoes button { display: block; text-align: left; font: 700 1rem/1.2 var(--sans); padding: 0.85rem 1rem; border-radius: 0.45rem; border: 1px solid var(--linha); background: var(--nevoa); color: var(--tinta); text-decoration: none; cursor: pointer; }
+#janela-comp .opcoes a:hover, #janela-comp .opcoes button:hover { border-color: var(--musgo); }
+#janela-comp .fechar { margin-top: 1rem; width: 100%; font: 1rem var(--sans); background: none; border: none; color: var(--pedra); padding: 0.5rem; cursor: pointer; text-decoration: underline; }
+@media (max-width: 760px) { .botao.comp .rot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } .botao.comp { padding: 0.4rem 0.55rem; } }
+
+.idiomas-rodape { margin-top: 1.25rem; font-size: 1rem; gap: 1rem; }
+.idiomas-rodape a { color: #c9d0c7; }
+.idiomas-rodape a[aria-current='true'] { color: #fff; }
+@media (max-width: 460px) { .topo-dir .idiomas { display: none; } }
