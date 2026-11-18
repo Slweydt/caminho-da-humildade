@@ -203,3 +203,15 @@ p { margin: 0 0 1em; }
 }
 
 .aviso { margin-top: 1.5rem; padding: 1rem 1.1rem; border-left: 3px solid var(--aurora); background: var(--papel); max-width: 38rem; }
+
+/* Página do autor: trajetória, atuação, redes */
+.linha-tempo { list-style: none; padding: 0; margin: 0; max-width: 44rem; }
+.linha-tempo li { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: 0.9rem 0; border-top: 1px solid var(--linha); }
+.linha-tempo .ano { font-family: var(--serif); font-weight: 500; color: var(--musgo); }
+@media (max-width: 520px) { .linha-tempo li { grid-template-columns: 1fr; gap: 0.15rem; } }
+.colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 4rem; }
+.colunas h3 { margin-top: 0; }
+@media (max-width: 760px) { .colunas { grid-template-columns: 1fr; } }
+.redes-lista { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.redes-lista a { display: inline-block; padding: 0.6rem 1rem; border: 1.5px solid var(--musgo); border-radius: 0.4rem; text-decoration: none; font-weight: 700; }
+.redes-lista a:hover { background: rgba(61,90,73,.08); }
