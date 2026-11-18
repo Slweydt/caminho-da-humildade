@@ -1,5 +1,5 @@
 // Funcionamento offline: guarda os arquivos do app no aparelho depois da primeira visita.
-const CACHE = 'app-v16'
+const CACHE = 'app-v17'
 
 self.addEventListener('install', (ev) => {
   ev.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', './index.html', './manifest.webmanifest'])))
