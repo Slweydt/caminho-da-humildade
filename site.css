@@ -170,3 +170,13 @@ p { margin: 0 0 1em; }
   .livro h3 { font-size: 1.05rem; }
   .livro p { font-size: 0.9rem; }
 }
+
+/* Compartilhar */
+.compartilhar { margin-top: 1rem; }
+.compartilhar .botao { display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; }
+.compartilhar .redes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.compartilhar .redes a, .compartilhar .redes button { font: 700 0.92rem/1.2 var(--sans); padding: 0.5rem 0.8rem; border-radius: 0.4rem; border: 1px solid var(--linha); background: var(--papel); color: var(--tinta); text-decoration: none; cursor: pointer; }
+.compartilhar .redes a:hover, .compartilhar .redes button:hover { border-color: var(--musgo); }
+.compartilhar.escuro .botao { border-color: #8f9a8f; color: #eef1ec; }
+.compartilhar.escuro .botao:hover { background: rgba(255,255,255,.08); }
+.compartilhar.escuro .redes a, .compartilhar.escuro .redes button { background: transparent; color: #eef1ec; border-color: #5a665e; }
