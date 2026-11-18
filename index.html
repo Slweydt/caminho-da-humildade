@@ -15,7 +15,7 @@
 <script>
 (function(){var h=location.hash.slice(1).split('-')[0];var app=['hoje','dia','caminho','livro','evolucao','regra','ajustes','privacidade'];
 var inst=window.matchMedia&&matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
-if(app.indexOf(h)>=0||inst){location.replace('/app/'+location.hash);}else if(h==='livros'){location.replace('/livros/');}})();
+if(app.indexOf(h)>=0||(inst&&location.search.indexOf('site')<0)){location.replace('/app/'+location.hash);}else if(h==='livros'){location.replace('/livros/');}})();
 </script>
 </head>
 <body>
