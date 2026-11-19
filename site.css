@@ -228,3 +228,91 @@ p { margin: 0 0 1em; }
 .grupo-formato .formatos { margin-top: 0.5rem; }
 .legenda { background: var(--papel); border-left: 3px solid var(--musgo); padding: 0.8rem 1rem; font-size: 0.97rem; }
 .noite .legenda { background: var(--noite-2); }
+
+/* ===== 19/11/2026 — "Caderno de bordo"
+   Papel de caderno, tinta preta e caneta azul; a linha vermelha da margem aparece só na abertura.
+   Sem etiquetas coloridas, sem faixas escuras, sem ilustração no topo. */
+:root {
+  --nevoa: #f6f6f3;
+  --papel: #fbfbf9;
+  --tinta: #1c1f26;
+  --musgo: #1c1f26;
+  --pedra: #5d626b;
+  --linha: #dcdfe3;
+  --caneta: #2340a0;
+  --margem: #c8463d;
+  --aurora: #2340a0;
+  --aurora-clara: #9fb0e6;
+}
+body { background: var(--nevoa); }
+a { color: var(--caneta); }
+:focus-visible { outline-color: var(--caneta); }
+h1, h2, h3 { letter-spacing: 0; }
+.topo { background: var(--nevoa); }
+.menu a[aria-current='page'] { border-bottom-color: var(--tinta); }
+.botao { border-radius: 2px; border-width: 1px; border-color: var(--tinta); color: var(--tinta); font-size: 0.95rem; }
+.botao:hover { background: rgba(28, 31, 38, 0.06); }
+.botao.cheio, .botao.ouro { background: var(--tinta); border-color: var(--tinta); color: #fff; }
+.botao.cheio:hover, .botao.ouro:hover { background: #343947; }
+.secao.clara { background: transparent; border-top: 1px solid var(--linha); }
+.noite { background: transparent; color: var(--tinta); border-top: 1px solid var(--linha); }
+.noite h2, .noite h3 a { color: var(--tinta); }
+.noite .livro p, .noite .nota, .noite .livro .genero { color: var(--pedra); }
+.noite a { color: var(--caneta); }
+.selos, .selo { display: none; }
+.faixa-qr { background: var(--tinta); }
+.faixa-qr a { color: #fff; }
+
+/* Abertura: uma página de caderno, em primeira pessoa */
+.carta { padding: clamp(3rem, 8vw, 6rem) 0 clamp(2.5rem, 6vw, 4.5rem); border-bottom: 1px solid var(--linha); }
+.carta .caixa { display: grid; grid-template-columns: 1fr 14rem; gap: clamp(2rem, 6vw, 5rem); align-items: end; }
+.carta-corpo { border-left: 1px solid var(--margem); padding-left: clamp(1.25rem, 3vw, 2.5rem); }
+.carta h1 { font-size: clamp(1.85rem, 3.9vw, 2.9rem); line-height: 1.22; font-weight: 400; max-width: 34ch; margin-bottom: 1.25rem; }
+.carta p { font-size: 1.12rem; max-width: 36rem; color: #2f343d; }
+.assinatura { font-family: var(--serif); font-style: italic; font-size: 1.2rem !important; margin-top: 1.75rem; }
+.assinatura span { font-style: normal; font-family: var(--sans); font-size: 0.9rem; color: var(--pedra); margin-left: 0.6rem; }
+.carta-foto { width: 100%; aspect-ratio: 1; object-fit: cover; filter: grayscale(1) contrast(1.05); border-radius: 2px; }
+@media (max-width: 760px) {
+  .carta .caixa { grid-template-columns: 1fr; }
+  .carta-foto { order: -1; width: 8rem; }
+}
+
+/* Índice de livros: uma linha por livro, como a lista de um caderno */
+.indice { list-style: none; padding: 0; margin: 0; }
+.indice .item { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1.5rem 2rem; padding: 1.75rem 0; border-top: 1px solid var(--linha); align-items: start; }
+.indice .item:last-child { border-bottom: 1px solid var(--linha); }
+.indice img, .indice .capa-texto { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 1px; box-shadow: 0 1px 3px rgba(0,0,0,.18); }
+.indice .capa-texto { padding: 10%; }
+.indice .capa-texto .t { font-size: 1rem; }
+.indice h3 { margin: 0 0 0.2rem; font-size: 1.45rem; }
+.indice h3 a { color: var(--tinta); text-decoration: none; }
+.indice h3 a:hover { text-decoration: underline; }
+.indice .sub { font-size: 1rem; margin: 0 0 0.75rem; }
+.nota-autor { max-width: 40rem; font-family: var(--serif); font-size: 1.05rem; line-height: 1.6; }
+.onde { font-size: 0.95rem; margin: 0; }
+.onde span { color: var(--pedra); }
+@media (max-width: 520px) { .indice .item { grid-template-columns: 5rem 1fr; gap: 1rem; } .indice h3 { font-size: 1.2rem; } .nota-autor { font-size: 0.98rem; } }
+
+/* Caderno de bordo e trajetória: datas em tinta, sem cor */
+.bordo { border-top: 1px solid var(--linha); }
+.linha-tempo .ano { color: var(--tinta); font-variant-numeric: tabular-nums; }
+.linha-tempo li { grid-template-columns: 5.5rem 1fr; }
+
+/* Páginas de livro e do autor */
+.destaque .capa img { box-shadow: 0 1px 3px rgba(0,0,0,.18); border-radius: 1px; }
+.formatos li { background: transparent; border: none; border-top: 1px solid var(--linha); border-radius: 0; padding: 0.9rem 0; }
+.secao.clara .formatos li { background: transparent; }
+.grupo-titulo { font-family: var(--serif); font-weight: 500; font-size: 1.15rem; }
+.legenda { background: transparent; border-left: 1px solid var(--margem); color: #2f343d; }
+.aviso { background: transparent; border-left-color: var(--margem); }
+.autor img { border-radius: 2px; filter: grayscale(1) contrast(1.05); max-width: 15rem; }
+.momento, .momento:nth-child(2), .momento:nth-child(3) { border-top: 1px solid var(--tinta); }
+.redes-lista a { border-width: 1px; border-color: var(--tinta); border-radius: 2px; color: var(--tinta); }
+.app img { border-radius: 1.2rem; border-width: 6px; box-shadow: none; }
+.rodape { background: var(--tinta); }
+.idioma summary { border-width: 1px; border-radius: 2px; }
+#janela-comp { border-radius: 4px; }
+#janela-comp .opcoes a, #janela-comp .opcoes button { border-radius: 2px; background: var(--papel); }
+.secao:has(> .app) { border-top: 1px solid var(--linha); }
+.bordo .linha-tempo li { padding: 0.6rem 0; }
+.nota-autor.margem { border-left: 1px solid var(--margem); padding-left: 1.1rem; margin: 1.5rem 0 0.5rem; font-style: italic; color: #2f343d; }
