@@ -332,3 +332,13 @@ h1, h2, h3 { letter-spacing: 0; }
 .texto-autor footer { font-family: var(--serif); font-style: italic; margin-top: 1rem; color: #2f343d; }
 .texto-autor.curto { margin: 0 0 2rem; }
 .texto-autor.curto p { font-size: 1.02rem; }
+
+/* As palavras mais importantes (página O Caminho, 26/11/2026) */
+.palavras { margin: 2rem 0 0; max-width: 42rem; border-left: 1px solid var(--margem); padding-left: clamp(1rem, 3vw, 2rem); }
+.palavras ol { list-style: none; margin: 0; padding: 0; }
+.palavras li { display: flex; flex-direction: column; padding: 0.7rem 0; border-bottom: 1px solid var(--linha); }
+.palavras li span { font-size: 0.9rem; color: #555b66; }
+.palavras li strong { font-family: var(--serif); font-weight: 400; font-size: clamp(1.25rem, 3.2vw, 1.6rem); line-height: 1.3; margin-top: 0.15rem; }
+.palavras li.menos { border-bottom: 0; }
+.palavras li.menos strong { font-size: 1.1rem; color: #555b66; }
+.palavras figcaption { font-family: var(--serif); font-style: italic; margin-top: 1rem; color: #2f343d; }
