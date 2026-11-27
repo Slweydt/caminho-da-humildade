@@ -342,3 +342,4 @@ h1, h2, h3 { letter-spacing: 0; }
 .palavras li.menos { border-bottom: 0; }
 .palavras li.menos strong { font-size: 1.1rem; color: #555b66; }
 .palavras figcaption { font-family: var(--serif); font-style: italic; margin-top: 1rem; color: #2f343d; }
+.palavras-fecho { font-family: var(--serif); font-size: clamp(1.15rem, 2.8vw, 1.35rem); line-height: 1.45; max-width: 42rem; margin: 2.25rem 0 0; }
